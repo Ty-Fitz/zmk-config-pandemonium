@@ -11,7 +11,6 @@
 #define ALPHA 0
 #define NUMFN 1
 #define SYMBL 2
-#define NAVVL 3
 
 / {
     behaviors {
@@ -22,22 +21,6 @@
             tapping-term-ms = <225>;
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
-        };
-    };
-};
-
-/ {
-    macros {
-        SECT: SECT {
-            label = "SECT";
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings
-				= <&macro_tap &kp N0 &kp N0 &kp N0 &kp A &kp N7>
-				, <&macro_press &kp LALT>
-				, <&macro_tap &kp X>
-				, <&macro_release &kp LALT>
-			;
         };
     };
 };
@@ -56,29 +39,20 @@
         };
 		
         NUMFN {
-            bindings = <
-    &kp ESC     &trans    &trans    &trans    &kp GRAVE     &trans    &kp MINUS           &kp EQUAL        &kp BSLH         &trans
-    &kp N1     &kp N2    &kp N3    &kp N4    &kp N5     &kp N6    &kp N7           &kp N8   &kp N9      &kp N0
-    &trans     &trans    &trans    &trans   &trans    &kp NUBS   &kp DOT  &kp COMMA  &kp RETURN
-	&kp LCTRL  &kp LALT  &kp SPACE  &trans  &lt 2 BSPC  &kp RALT
+            bindings = 
+    &kp N1     &kp N2    &kp N3    &kp N4    &kp N5     &kp N6    &kp N7           &kp N8        &kp N9         &kp N0
+    &kp LBKT     &kp RBKT    &kp BSLH    &kp trans    &kp trans     &kp trans    &kp trans           &kp trans   &kp trans      &kp trans
+    &trans     &trans    &trans    &trans   &trans    &kp MINUS   &kp EQUAL  &kp COMMA  &kp FSLH
+	&trans  &trans  &kp DEL  &trans  &trans  &trans
             >;
         };
 		
         SYMBL {
             bindings = <
-    &trans  &trans  &trans   &trans  &trans  &kp FSLH  &kp F11     &kp F12     &kp LBKT       &kp RBKT
-    &kp F1  &kp F2   &kp F3  &kp F4    &kp F5     &kp F6  &kp F7  &kp F8  &kp F9    &kp F10
-    &trans    &trans   &trans  &trans    &trans     &trans    &trans       &trans       &trans
+    &kp TAB  &trans  &kp UP   &trans  &trans  &kp FSLH  &trans     &trans     &trans       &trans
+    &trans  &kp LEFT   &kp DOWN  &kp RIGHT    &trans     &trans  &trans  &trans &trans    &trans
+    &BT_CLR    &BT_SEL 0   &BT_SEL 1  &BT_SEL 2    &trans     &trans    &trans       &trans       &trans
 	&trans    &trans   &trans  &trans  &trans     &trans
-            >;
-        };
-		
-        NAVVL {
-            bindings = <
-    &kp TAB    &kp PG_DN    &kp UP     &kp PG_UP   &trans  &trans      &trans     &kp END        &kp HOME  &kp PSCRN
-    &trans  &kp LEFT  &kp DOWN  &kp RIGHT   &trans  &trans    &kp INS     &kp DEL       &kp SEMI   &kp APOS
-    &trans    &trans    &trans     &trans   &kp C_MUTE  &kp C_VOL_DN  &kp C_PLAY  &kp C_VOL_UP  &trans
-    &trans    &trans    &trans    &trans  &trans  &trans
             >;
         };
     };
