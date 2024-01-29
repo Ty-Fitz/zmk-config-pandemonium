@@ -26,22 +26,6 @@
 };
 
 / {
-    macros {
-        SECT: SECT {
-            label = "SECT";
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings
-				= <&macro_tap &kp N0 &kp N0 &kp N0 &kp A &kp N7>
-				, <&macro_press &kp LALT>
-				, <&macro_tap &kp X>
-				, <&macro_release &kp LALT>
-			;
-        };
-    };
-};
-
-/ {
     keymap {
         compatible = "zmk,keymap";
 
