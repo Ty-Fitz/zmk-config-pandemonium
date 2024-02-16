@@ -54,14 +54,14 @@ as: auto_shift {
             bindings = <
     AS(N1)     AS(N2)    AS(N3)    AS(N4)    AS(N5)     AS(N6)    AS(N7)           AS(N8)        AS(N9)         AS(N0)
     AS(LBKT)     AS(RBKT)    AS(BSLH)    &trans    &trans     &trans    &trans           &trans   AS(SEMI)      AS(APOS)
-    &trans       &trans      &trans      &trans     &trans      &trans    AS(MINUS)   AS(EQUAL)  AS(FSLH)
+    &trans       &trans      &trans      &trans     &trans      &trans    AS(EQUAL)   AS(MINUS)  AS(FSLH)
 	&trans  &trans  &kp DEL  &trans  &trans  &trans
             >;
         };
 		
         SYMBL {
             bindings = <
-    &kp TAB  &trans  &kp UP   &trans  &trans  &kp FSLH  &trans     &trans     &trans       &trans
+    &kp TAB  &trans  &kp UP   &trans  &trans  &kp FSLH  &trans     &trans     &trans       &bootloader
     &trans  &kp LEFT   &kp DOWN  &kp RIGHT    &trans     &trans  &trans  &trans &trans    &trans
     &bt BT_CLR_ALL    &bt BT_SEL 0   &bt BT_SEL 1  &bt BT_SEL 2    &bt BT_SEL 3 &trans    &trans       &trans       &trans
 	&trans    &trans   &trans  &trans  &trans     &trans
